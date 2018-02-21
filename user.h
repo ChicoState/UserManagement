@@ -9,7 +9,8 @@ class User
       void get_name();
       void get_id_num();
   private:
-      in id_num;
+      int id_num;
       string password;
       string name;
 };
+#endif
