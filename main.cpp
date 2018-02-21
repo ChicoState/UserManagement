@@ -1,7 +1,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
+
 #include "user.h"
+
 
 int main()
 {
@@ -17,7 +19,9 @@ int main()
     {
       std::cout<<"\nEnter password: ";
       std::cin>>pass;
+
       User add(user, pass, num++);
+
       all.push_back(add);
     }
   }while( user != "q" && user != "Q" );
