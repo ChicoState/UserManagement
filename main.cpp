@@ -1,17 +1,10 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "user.h"
+
 using namespace std;
 
-class User 
-{
- private:
-  string username;
-  string password;
-  int id_num;
- public:
-  User(string, string, int);
-};
 
 int main()
 {
@@ -35,10 +28,4 @@ int main()
 
   return 0;
 }
-
-
-User::User(string uname, string pword, int ID) 
-: username(uname), password(pword), id_num(ID)
-{}
-
 
