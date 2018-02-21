@@ -28,9 +28,6 @@ int main()
       cout<<"\nEnter password: ";
       cin>>pass;
       User add(user, pass, ++num);
-      //add.username = user;
-      //add.password = pass;
-      //add.id_num = ++num;
       all.push_back(add);
     }
   }while( user != "q" && user != "Q" );
