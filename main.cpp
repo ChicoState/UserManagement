@@ -1,15 +1,17 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <User.h>
+
 using namespace std;
 
-struct User 
+/**struct User 
 {
   string username;
   string password;
   int id_num;
 };
-
+*/
 int main()
 {
   string user, pass;
