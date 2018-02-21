@@ -2,12 +2,8 @@
 #include <string>
 #include <vector>
 
-struct User 
-{
-  std::string username;
-  std::string password;
-  int id_num;
-};
+#include "user.h"
+
 
 int main()
 {
@@ -23,10 +19,9 @@ int main()
     {
       std::cout<<"\nEnter password: ";
       std::cin>>pass;
-      User add;
-      add.username = user;
-      add.password = pass;
-      add.id_num = ++num;
+
+      User add(user, pass, num++);
+
       all.push_back(add);
     }
   }while( user != "q" && user != "Q" );
