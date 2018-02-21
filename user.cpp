@@ -6,6 +6,7 @@ User::User(){
     this->m_id = -1;
 }
 
+
 int User::getId() {
     return this->m_id;
 }
