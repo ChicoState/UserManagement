@@ -2,7 +2,7 @@
 #define USER_H
 
 #include <iostream>
-#include <string.h>
+#include <string>
 
 using namespace std;
 
