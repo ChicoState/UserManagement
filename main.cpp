@@ -1,20 +1,15 @@
 #include <iostream>
 #include <string>
 #include <vector>
-using namespace std;
+#include <user.h>
 
-struct User 
-{
-  string username;
-  string password;
-  int id_num;
-};
+using namespace std;
 
 int main()
 {
   string user, pass;
   int num = 0;
-  vector <User> all;
+
   do
   {
     cout<<"Enter new username or q to quit: ";
@@ -24,11 +19,7 @@ int main()
     {
       cout<<"\nEnter password: ";
       cin>>pass;
-      User add;
-      add.username = user;
-      add.password = pass;
-      add.id_num = ++num;
-      all.push_back(add);
+      addUser(user,pass);
     }
   }while( user != "q" && user != "Q" );
   cout<<endl<<"Users created: "<<all.size()<<endl;
