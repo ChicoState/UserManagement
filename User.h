@@ -6,8 +6,8 @@
 class User
 {
   public:
-    void setUsername();
-    void setPassword();
+    void setUsername(string user);
+    void setPassword(string pass);
     void setIdNum(int id);
     string getUsername();
     string getPassword();
