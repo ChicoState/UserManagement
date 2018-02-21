@@ -1,19 +1,21 @@
+
 #include "user.h"
+
 
 int main()
 {
-  string user, pass;
+  std::string user, pass;
   int num = 0;
-  vector <User> all;
+  std::vector <User> all;
   do
   {
-    cout<<"Enter new username or q to quit: ";
-    cin>>user;
+    std::cout<<"Enter new username or q to quit: ";
+    std::cin>>user;
 
     if( user != "q" && user != "Q" )
     {
-      cout<<"\nEnter password: ";
-      cin>>pass;
+      std::cout<<"\nEnter password: ";
+      std::cin>>pass;
       User add;
       add.username = user;
       add.password = pass;
@@ -21,7 +23,7 @@ int main()
       all.push_back(add);
     }
   }while( user != "q" && user != "Q" );
-  cout<<endl<<"Users created: "<<all.size()<<endl;
+  std::cout<<std::endl<<"Users created: "<<all.size()<<std::endl;
 
   return 0;
 }
