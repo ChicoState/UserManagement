@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include"user.h"
 using namespace std;
 
 struct User 
