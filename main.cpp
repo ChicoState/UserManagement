@@ -2,6 +2,11 @@
 #include <string>
 #include <vector>
 
+#include"user.h"
+using namespace std;
+
+=======
+
 struct User 
 {
   std::string username;
@@ -9,10 +14,13 @@ struct User
   int id_num;
 };
 
+
 int main()
 {
   std::string user, pass;
   int num = 0;
+
+  vector <User*> all;
   std::vector <User> all;
   do
   {
@@ -21,6 +29,15 @@ int main()
 
     if( user != "q" && user != "Q" )
     {
+
+      cout<<"\nEnter password: ";
+      cin>>pass;
+      User* add = new User;
+      add->add_user(user);
+      add->add_password(pass);
+      ++num;
+      add->add_id(num);
+
       std::cout<<"\nEnter password: ";
       std::cin>>pass;
       User add;
