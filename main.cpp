@@ -1,36 +1,31 @@
-#include <iostream>
-#include <string>
-#include <vector>
 
-struct User 
-{
-  std::string username;
-  std::string password;
-  int id_num;
-};
+#include "user.h"
+
 
 int main()
 {
   std::string user, pass;
   int num = 0;
-  std::vector <User> all;
+  int size = 2;
+  vector<User> users(size);
+
   do
   {
-    std::cout<<"Enter new username or q to quit: ";
-    std::cin>>user;
+    cout<<"Enter new username or q to quit: ";
+    cin>>user;
+    if (num == size){
+      users.resize(size+1);
+    }
 
     if( user != "q" && user != "Q" )
     {
-      std::cout<<"\nEnter password: ";
-      std::cin>>pass;
-      User add;
-      add.username = user;
-      add.password = pass;
-      add.id_num = ++num;
-      all.push_back(add);
+      cout<<"\nEnter password: ";
+      cin>>pass;
+      num++;
+      users.push_back(User(user, pass, num));
     }
   }while( user != "q" && user != "Q" );
-  std::cout<<std::endl<<"Users created: "<<all.size()<<std::endl;
+  cout<<endl<<"Users created: "<<users.size()-1<<endl;
 
   return 0;
 }
