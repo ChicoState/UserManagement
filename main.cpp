@@ -9,6 +9,8 @@ class User
   string username;
   string password;
   int id_num;
+ public:
+  User(string, string, int);
 };
 
 int main()
@@ -25,10 +27,10 @@ int main()
     {
       cout<<"\nEnter password: ";
       cin>>pass;
-      User add;
-      add.username = user;
-      add.password = pass;
-      add.id_num = ++num;
+      User add(user, pass, ++num);
+      //add.username = user;
+      //add.password = pass;
+      //add.id_num = ++num;
       all.push_back(add);
     }
   }while( user != "q" && user != "Q" );
@@ -36,3 +38,10 @@ int main()
 
   return 0;
 }
+
+
+User::User(string uname, string pword, int ID) 
+: username(uname), password(pword), id_num(ID)
+{}
+
+
