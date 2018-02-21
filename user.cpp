@@ -1,5 +1,6 @@
 #include"user.h"
 
+
 void User::set_user(string u){
   username = u;
 }
