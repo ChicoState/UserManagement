@@ -3,8 +3,9 @@
 #include <vector>
 using namespace std;
 
-struct User 
+class User 
 {
+  public:
   string username;
   string password;
   int id_num;
