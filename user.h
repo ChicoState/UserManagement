@@ -6,6 +6,7 @@
 
 using namespace std;
 
+
 class User {
   public:
     void set_user(string u);
