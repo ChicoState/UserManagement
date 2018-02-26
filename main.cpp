@@ -1,13 +1,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
-struct User 
-{
-  std::string username;
-  std::string password;
-  int id_num;
-};
+#include "User.h"
+using namespace std;
 
 int main()
 {
